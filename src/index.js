@@ -1,12 +1,9 @@
-
 import readlineSync from 'readline-sync';
 import { getUserName } from './cli.js';
-
 
 export const randomNumbers = (range = 100, start = 1) => {
   return Math.floor((Math.random() * range) + start);
 };
-
 
 export default (description, questionAndCorrectAnswer) => {
   const name = getUserName();
