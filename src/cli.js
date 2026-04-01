@@ -6,4 +6,3 @@ export const getUserName = () => {
   console.log(`Hello, ${name}`)
   return name
 }
-
