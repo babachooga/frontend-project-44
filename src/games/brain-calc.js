@@ -1,35 +1,35 @@
-import { randomNumbers } from '../index.js';
-import startGame from '../index.js';
+import { randomNumbers } from '../index.js'
+import startGame from '../index.js'
 
-const description = 'What is the result of the expression?';
+const description = 'What is the result of the expression?'
 
 const calc = () => {
-  const symbols = ['*', '+', '-'];
-  let idForArray = Math.floor(Math.random() * symbols.length);
-  const symbol = symbols[idForArray];
+  const symbols = ['*', '+', '-']
+  let idForArray = Math.floor(Math.random() * symbols.length)
+  const symbol = symbols[idForArray]
 
-  const number1 = randomNumbers();
-  const number2 = randomNumbers();
+  const number1 = randomNumbers()
+  const number2 = randomNumbers()
 
-  let result;
+  let result
   switch (symbol) {
     case '+':
-      result = number1 + number2;
-      break;
+      result = number1 + number2
+      break
     case '-':
-      result = number1 - number2;
-      break;
+      result = number1 - number2
+      break
     case '*':
-      result = number1 * number2;
-      break;
+      result = number1 * number2
+      break
     default:
-      break;
+      break
   }
 
-  const question = `Question: ${number1} ${symbol} ${number2}`;
-  return [question, result];
-};
+  const question = `Question: ${number1} ${symbol} ${number2}`
+  return [question, result]
+}
 
 export default () => {
-  return startGame(description, calc);
-};
+  return startGame(description, calc)
+}

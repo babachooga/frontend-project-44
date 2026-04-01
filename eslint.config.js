@@ -1,5 +1,5 @@
-import globals from 'globals';
-import stylistic from '@stylistic/eslint-plugin';
+import globals from 'globals'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   {
@@ -16,10 +16,10 @@ export default [
     rules: {
       '@stylistic/indent': ['error', 2],
       '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'always'], // Если хочешь точки с запятой, ставь 'always', если нет — 'never'
+      '@stylistic/semi': ['error', 'never'],
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/eol-last': 'error',
       '@stylistic/object-curly-spacing': ['error', 'always'],
     },
   },
-];
+]
