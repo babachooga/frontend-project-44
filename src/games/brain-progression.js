@@ -17,8 +17,8 @@ const progression = () => {
   }
 
   const corrrectAnswer = array[hiddenIndex];
-  array[hiddenIndex] = '...';
-  const question = `Question: ${array.join(', ')}`;
+  array[hiddenIndex] = '..';
+  const question = `Question: ${array.join(' ')}`;
 
   return [question, corrrectAnswer];
 };
