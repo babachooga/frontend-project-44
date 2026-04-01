@@ -6,7 +6,7 @@ const description =
 
 const even = () => {
   let number = randomNumbers();
-  const question = number;
+  const question = `Question: ${number}`;
   const answer = number % 2 === 0 ? 'yes' : 'no';
   return [question, answer];
 };
