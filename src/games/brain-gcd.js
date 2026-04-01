@@ -20,5 +20,5 @@ const gcd = () => {
 }
 
 export default () => {
-  return startGame(description,gcd)
+  return startGame(description, gcd)
 }

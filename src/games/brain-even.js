@@ -11,5 +11,5 @@ const even = () => {
 }
 
 export default () => {
-  return startGame(description,even)
+  return startGame(description, even)
 }

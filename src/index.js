@@ -12,6 +12,7 @@ export default (description, questionAndCorrectAnswer) => {
     const [question, correctAnswer] = questionAndCorrectAnswer()
     console.log(question)
     const userAnswer = readlineSync.question('Your answer: ')
+
     if (correctAnswer === Number(userAnswer) || correctAnswer === userAnswer.toLowerCase()) {
       console.log('Correct!')
     } else {
@@ -20,6 +21,6 @@ export default (description, questionAndCorrectAnswer) => {
       return null
     }
   }
+  
   console.log(`Congratulations, ${name}!`)
 }
-
