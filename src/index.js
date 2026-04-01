@@ -16,7 +16,8 @@ export default (description, questionAndCorrectAnswer) => {
 
     if (String(userAnswer) === String(correctAnswer)) {
       console.log('Correct!')
-    } else {
+    }
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
       return
