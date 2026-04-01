@@ -8,19 +8,20 @@ export const randomNumbers = (range = 100, start = 1) => {
 export default (description, questionAndCorrectAnswer) => {
   const name = getUserName()
   console.log(description)
-  for (let i = 0; i < 3; i++) {
+
+  for (let i = 0; i < 3; i += 1) {
     const [question, correctAnswer] = questionAndCorrectAnswer()
-    console.log(question)
+    console.log(`Question: ${question}`)
     const userAnswer = readlineSync.question('Your answer: ')
 
-    if (correctAnswer === Number(userAnswer) || correctAnswer === userAnswer.toLowerCase()) {
+    if (String(userAnswer) === String(correctAnswer)) {
       console.log('Correct!')
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
-      return null
+      return
     }
   }
-  
+
   console.log(`Congratulations, ${name}!`)
 }
