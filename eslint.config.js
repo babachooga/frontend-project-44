@@ -1,42 +1,25 @@
-import js from '@eslint/js';
 import globals from 'globals';
-import json from '@eslint/json';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default [
   {
-    files: ['**/*.{js,mjs,cjs}'], 
-    rules: {
-      ...js.configs.recommended.rules,
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'always'],
-      'no-console': 'off',
-    },
-    plugins: {
-      '@stylistic': stylistic,
-    },
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         ...globals.node,
       },
     },
-  },
-  {
-    files: ['**/*.json'],
-    ignores: ['package-lock.json'], 
     plugins: {
-      json,
+      '@stylistic': stylistic,
     },
-    language: 'json/json',
     rules: {
-      ...json.configs.recommended.rules,
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'always'], // Если хочешь точки с запятой, ставь 'always', если нет — 'never'
+      '@stylistic/no-trailing-spaces': 'error',
+      '@stylistic/eol-last': 'error',
+      '@stylistic/object-curly-spacing': ['error', 'always'],
     },
-  },
-
-  {
-    ignores: ['node_modules/', 'dist/'],
   },
 ];
